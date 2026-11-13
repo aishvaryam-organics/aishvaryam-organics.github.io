@@ -25,11 +25,13 @@ BEFORE YOU PUT IT ONLINE (2 edits, both in index.html)
    When every photo is from your own farm, remove the word "illustrative" from
    the <body> tag.
 
-PUTTING IT ONLINE
-   It is a static site (no database, no server code). Upload this folder as it is
-   to any static host, for example Netlify, Cloudflare Pages or GitHub Pages, and
-   point your domain at it. After it is live, add the og:image and canonical
-   lines noted near the top of index.html so WhatsApp link previews show a photo.
+WHERE IT IS ONLINE
+   Live site:   https://aishvaryam-organics.github.io/
+   Repository:  https://github.com/aishvaryam-organics/aishvaryam-organics.github.io
+   Anything pushed to the main branch goes live in about a minute.
+   If you move to your own domain, set it under Settings > Pages in the
+   repository and change the og:url, og:image and canonical lines near the
+   top of index.html.
 
 FONTS
    Rozha One and Anek (Latin, Gujarati) are open-source fonts under the SIL Open
