@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aishvaryam Organics</title>
+<meta name="description" content="A free-range herd of purebred Gir and Kankrej cows near Gandhinagar, Gujarat. Organic fodder grown in-house, no hormone injections, no antibiotics, hand milking only, and calves drink first.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aishvaryam Organics: purebred Gir and Kankrej cows near Gandhinagar">
+<meta property="og:description" content="You are what you eat. So are our cows. Free-range, organically fed, hand milked, and the calf always drinks first.">
+<!-- When the site is live, add: <meta property="og:image" content="https://YOUR-DOMAIN/images/fodder.jpg"> and <link rel="canonical" href="https://YOUR-DOMAIN/"> -->
+<meta name="theme-color" content="#1d4a31">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%231d4a31'/%3E%3Cg fill='none' stroke='%23e8a80c' stroke-width='3.6' stroke-linecap='round'%3E%3Cpath d='M20 31C9 28 6 17 15 8'/%3E%3Cpath d='M28 31C39 28 42 17 33 8'/%3E%3C/g%3E%3Ccircle cx='24' cy='37' r='3' fill='%23e8a80c'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Aishvaryam Organics","description":"Free-range herd of purebred Gir and Kankrej cows near Gandhinagar, Gujarat. A2 milk and milk products.","areaServed":"Gandhinagar, Gujarat, India"}
+</script>
+<style>
+/* Fonts ship with the site (fonts/ folder), so nothing loads from another server. */
+@font-face{font-family:"Rozha One";src:url("fonts/rozha-one-latin.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Anek Latin";src:url("fonts/anek-latin-wght.woff2") format("woff2");font-weight:100 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Anek Gujarati";src:url("fonts/anek-gujarati-wght.woff2") format("woff2");font-weight:100 800;font-style:normal;font-display:swap;unicode-range:U+0951-0952,U+0964-0965,U+0A80-0AFF,U+200C-200D,U+20B9,U+25CC,U+A830-A839}
+
+:root{
+  /* Layout idea: an old dairy-tin label. Fat-face headlines, ruled ledgers, one wide photo per chapter. */
+  --milk:#f3f6ef;      /* fresh-milk white, biased slightly green */
+  --paper:#ffffff;
+  --ink:#14251b;       /* near-black green */
+  --fodder:#1d4a31;    /* sorghum-leaf green */
+  --leaf:#3d7a4a;
+  --haldi:#e8a80c;     /* turmeric */
+  --gir:#8a3418;       /* Gir coat */
+  --rule:rgba(20,37,27,.18);
+  --rule-light:rgba(243,246,239,.22);
+  --display:"Rozha One","Abril Fatface","Bodoni 72",Georgia,serif;
+  --body:"Anek Latin","Segoe UI",system-ui,-apple-system,sans-serif;
+  --guj:"Anek Gujarati","Noto Sans Gujarati","Shruti",sans-serif;
+  --gutter:clamp(18px,4vw,48px);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--milk);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;font-weight:400}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.02;text-wrap:balance;letter-spacing:-.005em}
+h2{font-size:clamp(36px,5vw,68px)}
+h3{font-size:clamp(26px,2.6vw,34px);line-height:1.1}
+p{max-width:62ch}
+:focus-visible{outline:3px solid var(--haldi);outline-offset:3px;border-radius:2px}
+.wrap{width:100%;max-width:1240px;margin-inline:auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--milk);padding:10px 16px;z-index:50}
+.skip:focus{left:8px;top:8px}
+.eyebrow{max-width:none;font-size:13.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf)}
+.guj{font-family:var(--guj)}
+section{padding-block:clamp(64px,9vw,128px)}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 17px/1 var(--body);letter-spacing:.01em;padding:17px 26px;border-radius:999px;border:1.5px solid var(--ink);text-decoration:none;cursor:pointer;transition:transform .15s ease,background .15s ease,color .15s ease}
+.btn-solid{background:var(--ink);color:var(--milk)}
+.btn-solid:hover{background:var(--fodder);border-color:var(--fodder)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--milk)}
+.btn:active{transform:translateY(1px)}
+.btn[aria-disabled="true"]{opacity:.45;cursor:not-allowed}
+
+/* Header */
+.top{position:sticky;top:0;z-index:20;background:rgba(243,246,239,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand b{font-family:var(--display);font-weight:400;font-size:25px;line-height:1;display:block}
+.brand small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--leaf);margin-top:3px}
+.nav{display:flex;align-items:center;gap:clamp(14px,2.2vw,30px)}
+.nav a{font-size:16px;font-weight:500;text-decoration:none}
+.nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px;text-decoration-color:var(--haldi)}
+.nav .btn{padding:12px 20px;font-size:15.5px}
+@media (max-width:860px){.nav a:not(.btn){display:none}}
+@media (max-width:420px){.nav .btn{display:none}}
+
+/* Photo panels: a colour field that stands on its own, with the photo laid over it when the file exists */
+.ph{position:relative;overflow:hidden;background:var(--fodder);color:var(--milk);isolation:isolate}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.ph figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:48px 20px 16px;font-size:14.5px;font-weight:500;line-height:1.35;background:linear-gradient(to top,rgba(10,22,15,.78),rgba(10,22,15,0))}
+.ph .word{position:absolute;inset:0;z-index:1;display:grid;place-items:center;text-align:center;padding:24px;font-family:var(--guj);font-weight:700;font-size:clamp(64px,13vw,170px);line-height:1;color:rgba(243,246,239,.16)}
+.ph.has-img .word{display:none}
+body.illustrative .ph.has-img::after{content:"Illustrative image";position:absolute;top:12px;right:12px;z-index:3;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:rgba(10,22,15,.5);padding:5px 9px;border-radius:999px}
+
+/* Hero */
+.hero{padding-top:clamp(40px,6vw,84px);padding-bottom:0}
+.hero h1{font-size:clamp(46px,9.2vw,138px);line-height:.94;margin-top:22px;letter-spacing:-.012em}
+.hero h1 span{display:block;color:var(--fodder)}
+.hero-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,5vw,72px);align-items:end;margin-top:clamp(28px,4vw,48px)}
+.lede{font-size:clamp(19px,1.7vw,23px);line-height:1.5}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.hero-note{margin-top:14px;font-size:15px;color:var(--leaf);font-weight:500;text-align:right;max-width:none}
+.hero-figure{position:relative;margin-top:clamp(40px,6vw,76px)}
+.hero-ph{aspect-ratio:21/9;border-radius:6px}
+.hero-ph img{object-position:50% 46%}
+.seal{position:absolute;right:clamp(14px,5vw,72px);bottom:0;transform:translateY(46%);width:clamp(112px,15vw,190px);height:auto;z-index:4;filter:drop-shadow(0 6px 18px rgba(10,22,15,.25))}
+.seal .ring{transform-origin:100px 100px;animation:turn 60s linear infinite}
+@keyframes turn{to{transform:rotate(360deg)}}
+@media (max-width:860px){
+  .hero-row{grid-template-columns:1fr;align-items:start}
+  .hero-cta{justify-content:flex-start}
+  .hero-note{text-align:left}
+  .hero-ph{aspect-ratio:4/3}
+  .hero-ph figcaption{padding-right:140px}
+}
+
+/* Ledger: always / never */
+.ledger{background:var(--fodder);color:var(--milk);margin-top:calc(-1 * clamp(24px,3vw,40px));padding-top:calc(clamp(64px,9vw,128px) + clamp(24px,3vw,40px))}
+.ledger .eyebrow{color:var(--haldi)}
+.ledger h2{margin-top:12px}
+.ledger-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,5vw,80px);margin-top:clamp(36px,5vw,64px)}
+.ledger-col h3{font-family:var(--body);font-weight:600;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--haldi);padding-bottom:14px;border-bottom:2px solid var(--haldi)}
+.ledger-col li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:8px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--rule-light);font-size:clamp(19px,1.9vw,24px);font-weight:500;line-height:1.3}
+.ledger-col li span:first-child{font-family:var(--display);font-size:1.05em;color:var(--haldi)}
+.never li b{font-weight:500;text-decoration:line-through;text-decoration-color:var(--haldi);text-decoration-thickness:2px}
+@media (max-width:720px){.ledger-grid{grid-template-columns:1fr}}
+
+/* Section heads */
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,5vw,72px);align-items:end}
+.head .eyebrow{margin-bottom:12px}
+.head p{font-size:clamp(18px,1.5vw,21px)}
+@media (max-width:860px){.head{grid-template-columns:1fr;align-items:start}}
+
+/* Breeds */
+.breeds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3.4vw,48px);margin-top:clamp(36px,5vw,64px)}
+.breed .ph{aspect-ratio:4/5;border-radius:6px}
+.breed-gir .ph{background:var(--gir)}
+.breed-kankrej .ph{background:#6f777b}
+.breed .tag{position:absolute;left:18px;top:16px;z-index:2;font-family:var(--guj);font-weight:700;font-size:clamp(30px,3.6vw,46px);line-height:1;color:#fff;text-shadow:0 2px 14px rgba(10,22,15,.45)}
+.breed h3{margin-top:22px;font-size:clamp(34px,4vw,54px)}
+.breed > p{margin-top:10px}
+.facts{margin-top:18px;border-top:2px solid var(--ink)}
+.facts div{display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.facts dt{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);padding-top:4px}
+.facts dd{font-weight:500}
+.a2{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:clamp(20px,4vw,56px);margin-top:clamp(40px,6vw,80px);padding:clamp(24px,3.4vw,44px);background:var(--paper);border:1.5px solid var(--ink);outline:1.5px solid var(--ink);outline-offset:5px;border-radius:2px}
+.a2 strong{font-family:var(--display);font-weight:400;font-size:clamp(56px,7vw,96px);line-height:.9;color:var(--fodder)}
+.a2 h3{font-size:clamp(24px,2.4vw,30px)}
+.a2 p{margin-top:10px}
+@media (max-width:720px){
+  .breeds{grid-template-columns:1fr}
+  .a2{grid-template-columns:1fr}
+  .facts div{grid-template-columns:104px minmax(0,1fr)}
+}
+
+/* Feed: the daily menu */
+.feed{background:var(--paper);border-block:1px solid var(--rule)}
+.feed-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);margin-top:clamp(36px,5vw,64px);align-items:start}
+.menu{background:var(--milk);border:1.5px solid var(--ink);outline:1.5px solid var(--ink);outline-offset:5px;border-radius:2px;padding:clamp(22px,3.4vw,46px)}
+.menu-title{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.menu-title h3{font-size:clamp(30px,3.4vw,44px)}
+.menu-title span{font-family:var(--guj);font-weight:600;font-size:17px;color:var(--leaf)}
+.course{padding:22px 0;border-bottom:1px solid var(--rule)}
+.course:last-of-type{border-bottom:2px solid var(--ink)}
+.course h4{margin:0 0 4px;font:600 13px/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--leaf)}
+.course li{display:flex;align-items:baseline;gap:10px;padding:7px 0}
+.course li b{font-family:var(--display);font-weight:400;font-size:clamp(21px,2vw,26px);line-height:1.15;flex:none;max-width:60%}
+.course li i{flex:1 1 20px;min-width:16px;border-bottom:2px dotted var(--rule);transform:translateY(-5px)}
+.course li span{font-size:15.5px;font-weight:500;text-align:right;max-width:46%;line-height:1.35}
+.course .note{font-size:16px;margin-top:6px;color:#33483b}
+.off-menu{padding-top:20px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline}
+.off-menu h4{margin:0;font:600 13px/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gir)}
+.off-menu b{font-weight:600;text-decoration:line-through;text-decoration-color:var(--gir);text-decoration-thickness:2px}
+.feed-side{display:grid;gap:clamp(20px,3vw,32px);position:sticky;top:92px}
+.feed-side .ph{aspect-ratio:3/2;border-radius:6px;background:#8a6a2a}
+.pull{background:var(--haldi);color:var(--ink);padding:clamp(22px,3vw,36px);border-radius:6px}
+.pull p{font-family:var(--display);font-size:clamp(26px,2.8vw,38px);line-height:1.08}
+.pull small{display:block;margin-top:14px;font-size:15.5px;font-weight:500;line-height:1.45}
+@media (max-width:900px){.feed-grid{grid-template-columns:1fr}.feed-side{position:static}}
+@media (max-width:520px){
+  .course li{flex-wrap:wrap}
+  .course li b{max-width:100%}
+  .course li i{display:none}
+  .course li span{max-width:100%;text-align:left;flex-basis:100%}
+}
+
+/* Milking */
+.milking{background:var(--ink);color:var(--milk)}
+.milking .eyebrow{color:var(--haldi)}
+.milk-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center}
+.milking h2{margin-top:12px;font-size:clamp(44px,6.4vw,92px);line-height:.96}
+.milking h2 span{color:var(--haldi)}
+.milking .say{margin-top:14px;font-size:18px;font-style:italic;color:rgba(243,246,239,.72)}
+.steps{margin-top:clamp(24px,3vw,40px);counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:64px minmax(0,1fr);gap:8px;padding:20px 0;border-top:1px solid var(--rule-light)}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:44px;line-height:.9;color:var(--haldi)}
+.steps b{display:block;font-size:22px;font-weight:600;line-height:1.25}
+.steps span{display:block;margin-top:4px;color:rgba(243,246,239,.82)}
+.milking .ph{aspect-ratio:4/5;border-radius:6px;background:#a8792a}
+.milking .ph img{object-position:42% 50%}
+@media (max-width:860px){.milk-grid{grid-template-columns:1fr}.milking .ph{aspect-ratio:3/2}}
+
+/* Farm */
+.farm-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,80px);align-items:end}
+.farm h2{font-size:clamp(40px,6vw,88px);line-height:.98;margin-top:12px}
+.farm h2 span{color:var(--fodder)}
+.farm p + p{margin-top:14px}
+@media (max-width:860px){.farm-grid{grid-template-columns:1fr;align-items:start}}
+
+/* Interest */
+.interest{background:var(--haldi)}
+.interest .eyebrow{color:var(--ink)}
+.interest-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:start}
+.interest h2{margin-top:12px}
+.interest .intro{margin-top:18px;font-size:clamp(18px,1.5vw,21px)}
+.form{background:var(--milk);border:1.5px solid var(--ink);outline:1.5px solid var(--ink);outline-offset:5px;border-radius:2px;padding:clamp(20px,3vw,36px);display:grid;gap:18px}
+.field label,.field legend{display:block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;padding:0}
+.field input[type="text"],.field textarea{width:100%;font:500 18px/1.4 var(--body);color:var(--ink);background:var(--paper);border:1.5px solid var(--ink);border-radius:4px;padding:13px 14px}
+.field textarea{min-height:84px;resize:vertical}
+fieldset.field{border:0;margin:0;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips label{margin:0;letter-spacing:0;text-transform:none;font-size:17px;font-weight:500;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border:1.5px solid var(--ink);border-radius:999px;background:var(--paper);cursor:pointer}
+.chips input{accent-color:var(--fodder);width:18px;height:18px;margin:0}
+.chips label:has(input:checked){background:var(--fodder);color:var(--milk);border-color:var(--fodder)}
+.form .btn{justify-content:center}
+.form-note{font-size:14.5px;line-height:1.45;color:#33483b;max-width:none}
+@media (max-width:860px){.interest-grid{grid-template-columns:1fr}}
+
+/* Questions */
+.qa-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,80px);align-items:start}
+.qa details{border-top:1px solid var(--rule);padding:6px 0}
+.qa details:last-child{border-bottom:1px solid var(--rule)}
+.qa summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:16px 0;font-size:clamp(19px,1.8vw,23px);font-weight:600;line-height:1.3}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font-family:var(--display);font-size:28px;line-height:.8;color:var(--leaf);flex:none}
+.qa details[open] summary::after{content:"\2212"}
+.qa details p{padding:0 0 20px}
+@media (max-width:860px){.qa-grid{grid-template-columns:1fr}}
+
+/* Footer */
+.foot{background:var(--ink);color:var(--milk);padding-block:clamp(48px,7vw,96px) 36px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,3fr) minmax(0,3fr);gap:clamp(24px,4vw,56px)}
+.foot .big{font-family:var(--display);font-size:clamp(40px,6vw,84px);line-height:.95}
+.foot .big + p{margin-top:10px;font-family:var(--guj);font-weight:600;font-size:22px;color:var(--haldi)}
+.foot .meaning{margin-top:14px;color:rgba(243,246,239,.78);max-width:44ch}
+.foot h3{font:600 13px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--haldi);margin-bottom:14px}
+.foot li{padding:5px 0}
+.foot li a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(243,246,239,.4)}
+.foot li a:hover{text-decoration-color:var(--haldi)}
+.foot li small{display:block;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,246,239,.55)}
+.foot .todo{color:rgba(243,246,239,.55);font-style:italic}
+.fine{margin-top:clamp(36px,5vw,64px);padding-top:20px;border-top:1px solid var(--rule-light);display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between;font-size:14px;color:rgba(243,246,239,.62)}
+.fine p{max-width:none}
+@media (max-width:860px){.foot-grid{grid-template-columns:1fr}}
+
+/* Phone dock */
+.dock{display:none}
+@media (max-width:720px){
+  .dock{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;justify-content:center;box-shadow:0 10px 30px rgba(10,22,15,.3);border-radius:999px}
+  .dock .btn{width:100%;justify-content:center;background:var(--fodder);border-color:var(--fodder);color:var(--milk)}
+  body{padding-bottom:84px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .seal .ring{animation:none}
+  .btn{transition:none}
+}
+</style>
+</head>
+
+<!-- EDIT 1 of 2. While any photo on the page is AI-generated or stock, keep class="illustrative" on <body>:
+     it puts a small "Illustrative image" tag on each photo. Remove the class once every photo is from your own farm. -->
+<body class="illustrative">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Aishvaryam Organics, back to top">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#1d4a31"/><g fill="none" stroke="#e8a80c" stroke-width="3.2" stroke-linecap="round"><path d="M20 31C10 28 7 18 15 9"/><path d="M28 31C38 28 41 18 33 9"/></g><circle cx="24" cy="36.5" r="2.6" fill="#e8a80c"/></svg>
+      <span><b>Aishvaryam</b><small>Organics</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#cows">Our cows</a>
+      <a href="#feed">What they eat</a>
+      <a href="#milking">Milking</a>
+      <a href="#farm">The farm</a>
+      <a href="#questions">Questions</a>
+      <a class="btn btn-solid" href="#interest">Ask about milk and ghee</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Purebred Gir and Kankrej &nbsp;·&nbsp; Free-range &nbsp;·&nbsp; Near Gandhinagar, Gujarat</p>
+    <h1>You are what you eat. <span>So are our cows.</span></h1>
+    <div class="hero-row">
+      <p class="lede">Aishvaryam Organics is a free-range herd of purebred Gir and Kankrej cows near Gandhinagar. They eat organic fodder that we grow ourselves. They are never given hormone injections or antibiotics. They are milked by hand, and only after their calves have had their fill.</p>
+      <div>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="#interest">Ask about milk and ghee</a>
+          <a class="btn btn-line" href="#feed">See what they eat</a>
+        </div>
+        <p class="hero-note">We are not selling yet. First, meet the herd.</p>
+      </div>
+    </div>
+    <div class="hero-figure">
+      <figure class="ph hero-ph">
+        <span class="word" aria-hidden="true">ઐશ્વર્યમ્</span>
+        <img src="images/fodder.jpg" srcset="images/fodder-sm.jpg 900w, images/fodder.jpg 1800w" sizes="(max-width:1240px) 100vw, 1200px" width="1800" height="1195" alt="Tall green sorghum beside a low field of lucerne at sunrise, with a water channel between them" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+        <figcaption>Sorghum on the left, lucerne on the right. Two of the green fodders our herd eats.</figcaption>
+      </figure>
+      <svg class="seal" viewBox="0 0 200 200" role="img" aria-label="Seal: Aishvaryam Organics, pure Gir and Kankrej, hand milked">
+        <circle cx="100" cy="100" r="98" fill="#e8a80c"/>
+        <circle cx="100" cy="100" r="91" fill="none" stroke="#14251b" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="56" fill="none" stroke="#14251b" stroke-width="1.5"/>
+        <g class="ring">
+          <path id="sealpath" d="M100 100m-67 0a67 67 0 1 1 134 0a67 67 0 1 1 -134 0" fill="none"/>
+          <text font-family="Anek Latin, Segoe UI, sans-serif" font-size="14.5" font-weight="700" letter-spacing="1.5" fill="#14251b"><textPath href="#sealpath" textLength="412" lengthAdjust="spacing">AISHVARYAM ORGANICS • PURE GIR &amp; KANKREJ • HAND MILKED •</textPath></text>
+        </g>
+        <g fill="none" stroke="#14251b" stroke-width="6.5" stroke-linecap="round"><path d="M91 116C66 109 59 84 79 62"/><path d="M109 116C134 109 141 84 121 62"/></g>
+        <circle cx="100" cy="130" r="6" fill="#14251b"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="ledger" id="promise" aria-labelledby="promise-h">
+  <div class="wrap">
+    <p class="eyebrow">The short version</p>
+    <h2 id="promise-h">What we always do, and what we never do.</h2>
+    <div class="ledger-grid">
+      <div class="ledger-col">
+        <h3>Always</h3>
+        <ul>
+          <li><span aria-hidden="true">✓</span><span>Purebred Gir and Kankrej, both native Gujarat breeds</span></li>
+          <li><span aria-hidden="true">✓</span><span>Free-range, with open land to walk and graze</span></li>
+          <li><span aria-hidden="true">✓</span><span>The calf drinks first, at every milking</span></li>
+          <li><span aria-hidden="true">✓</span><span>Milked by hand</span></li>
+          <li><span aria-hidden="true">✓</span><span>Organic feed, grown in-house or bought directly from farmers</span></li>
+        </ul>
+      </div>
+      <div class="ledger-col never">
+        <h3>Never</h3>
+        <ul>
+          <li><span aria-hidden="true">✕</span><span><b>Hormone injections</b></span></li>
+          <li><span aria-hidden="true">✕</span><span><b>Antibiotics</b></span></li>
+          <li><span aria-hidden="true">✕</span><span><b>Inbreeding</b></span></li>
+          <li><span aria-hidden="true">✕</span><span><b>Milking machines</b></span></li>
+          <li><span aria-hidden="true">✕</span><span><b>Hybrid grass or Napier</b></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cows" aria-labelledby="cows-h">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Our cows</p>
+        <h2 id="cows-h">Two breeds that belong to Gujarat.</h2>
+      </div>
+      <p>Gir and Kankrej cattle have lived on this land for centuries. Both are indigenous Indian breeds, and both give A2 milk. Our herd is purebred, and we never breed related animals with each other.</p>
+    </div>
+
+    <div class="breeds">
+      <article class="breed breed-gir">
+        <figure class="ph">
+          <span class="word" aria-hidden="true">ગીર</span>
+          <img src="images/gir.jpg" srcset="images/gir-sm.jpg 640w, images/gir.jpg 1440w" sizes="(max-width:720px) 100vw, 580px" width="1440" height="1800" loading="lazy" alt="A red-brown Gir cow with a domed forehead, long curled ears and horns that sweep back" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+          <span class="tag guj" lang="gu">ગીર</span>
+        </figure>
+        <h3>Gir</h3>
+        <p>From the Gir forests of Saurashtra, and one of India's best-known dairy breeds. Our Gir cows are thoroughbred.</p>
+        <dl class="facts">
+          <div><dt>Home</dt><dd>The Gir hills and forests of Saurashtra, Gujarat</dd></div>
+          <div><dt>Spot one by</dt><dd>A domed forehead, long curled ears, and a red or speckled coat</dd></div>
+          <div><dt>Known for</dt><dd>Rich milk and a gentle nature</dd></div>
+        </dl>
+      </article>
+      <article class="breed breed-kankrej">
+        <figure class="ph">
+          <span class="word" aria-hidden="true">કાંકરેજ</span>
+          <img src="images/kankrej.jpg" srcset="images/kankrej-sm.jpg 640w, images/kankrej.jpg 1440w" sizes="(max-width:720px) 100vw, 580px" width="1440" height="1800" loading="lazy" alt="A silver-grey Kankrej cow with tall lyre-shaped horns standing in a green field" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+          <span class="tag guj" lang="gu">કાંકરેજ</span>
+        </figure>
+        <h3>Kankrej</h3>
+        <p>From the dry plains of north Gujarat, around Banaskantha and the Rann of Kutch. Among the heaviest of India's cattle breeds.</p>
+        <dl class="facts">
+          <div><dt>Home</dt><dd>North Gujarat, south-east of the Rann of Kutch</dd></div>
+          <div><dt>Spot one by</dt><dd>A silver-grey coat and tall, lyre-shaped horns</dd></div>
+          <div><dt>Known for</dt><dd>Strength, hardiness and a proud, brisk walk</dd></div>
+        </dl>
+      </article>
+    </div>
+
+    <aside class="a2" aria-labelledby="a2-h">
+      <strong aria-hidden="true">A2</strong>
+      <div>
+        <h3 id="a2-h">What A2 milk means</h3>
+        <p>Cow's milk contains a protein called beta-casein. It comes in two main types, A1 and A2. Indigenous Indian breeds such as Gir and Kankrej carry the A2 type, which is why their milk is called A2 milk. Ours comes only from these two breeds.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="feed" id="feed" aria-labelledby="feed-h">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">What they eat</p>
+        <h2 id="feed-h">The daily menu.</h2>
+      </div>
+      <p>Milk is made from feed. So we treat fodder the way a good kitchen treats its ingredients. We grow the green fodder ourselves, and we know the farmers who grow the rest.</p>
+    </div>
+
+    <div class="feed-grid">
+      <div class="menu">
+        <div class="menu-title">
+          <h3>On the menu</h3>
+          <span lang="gu">ગાયનો ખોરાક</span>
+        </div>
+
+        <div class="course">
+          <h4>Green fodder, grown in-house and organic</h4>
+          <ul>
+            <li><b>Sorghum</b><i></i><span>Jowar, cut green</span></li>
+            <li><b>Barley</b><i></i><span>Cut green</span></li>
+            <li><b>Lucerne</b><i></i><span>Rajko</span></li>
+          </ul>
+        </div>
+
+        <div class="course">
+          <h4>Dry fodder</h4>
+          <ul>
+            <li><b>Groundnut fodder</b><i></i><span>Dry</span></li>
+            <li><b>Barley straw</b><i></i><span>Dry</span></li>
+          </ul>
+        </div>
+
+        <div class="course">
+          <h4>Seed</h4>
+          <ul>
+            <li><b>Whole cotton seed</b><i></i><span>Organic, direct from farmers</span></li>
+          </ul>
+          <p class="note">Our cotton seed is rain-fed. It comes from a region where cotton is grown just once a year.</p>
+        </div>
+
+        <div class="course">
+          <h4>Silage</h4>
+          <ul>
+            <li><b>Maize silage</b><i></i><span>Organically grown and prepared</span></li>
+          </ul>
+        </div>
+
+        <div class="course">
+          <h4>Herbs and roots</h4>
+          <ul>
+            <li><b>Shatavari</b><i></i><span>From Neemuch, Madhya Pradesh</span></li>
+            <li><b>Ashwagandha</b><i></i><span>From Neemuch, Madhya Pradesh</span></li>
+            <li><b>Turmeric</b><i></i><span>Haldi</span></li>
+          </ul>
+        </div>
+
+        <div class="off-menu">
+          <h4>Never on the menu</h4>
+          <b>Hybrid grass</b>
+          <b>Napier grass</b>
+        </div>
+      </div>
+
+      <div class="feed-side">
+        <figure class="ph">
+          <img src="images/feed.jpg" srcset="images/feed-sm.jpg 900w, images/feed.jpg 1800w" sizes="(max-width:900px) 100vw, 480px" width="1800" height="1195" loading="lazy" alt="Whole cotton seed, shatavari roots, ashwagandha roots, turmeric, maize, barley and fresh lucerne laid out on jute cloth" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+          <figcaption>Cotton seed, shatavari, ashwagandha, turmeric, maize, barley and lucerne.</figcaption>
+        </figure>
+        <div class="pull">
+          <p>What the cow eats today is in the milk tomorrow.</p>
+          <small>That is why every item on this menu is organic, and why we can tell you where each one comes from.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="milking" id="milking" aria-labelledby="milking-h">
+  <div class="wrap milk-grid">
+    <div>
+      <p class="eyebrow">How we milk</p>
+      <h2 id="milking-h">Calf first. <span>Then us.</span></h2>
+      <p class="say">Pehle bachhda, phir hum.</p>
+      <ol class="steps">
+        <li><div><b>The calf drinks.</b><span>Every milking begins with the calf. It drinks until it is full.</span></div></li>
+        <li><div><b>We milk by hand.</b><span>No machine touches our cows. Each one is milked by hand.</span></div></li>
+        <li><div><b>You get what is left.</b><span>Only the milk that remains is taken for people. We follow this strictly, every day.</span></div></li>
+      </ol>
+    </div>
+    <figure class="ph">
+      <img src="images/milking.jpg" srcset="images/milking-sm.jpg 900w, images/milking.jpg 1800w" sizes="(max-width:860px) 100vw, 560px" width="1800" height="1195" loading="lazy" alt="Two hands milking a cow into a brass pail of frothing milk" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">
+      <figcaption>No machines. Hands, a pail, and time.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="farm" id="farm" aria-labelledby="farm-h">
+  <div class="wrap farm-grid">
+    <div>
+      <p class="eyebrow">The farm</p>
+      <h2 id="farm-h">Raised near Gandhinagar, <span>Gujarat's green capital.</span></h2>
+    </div>
+    <div>
+      <p>Our farm is close to Gandhinagar, a city known for its trees. The herd is free-range here. The cows walk, graze and rest in the open.</p>
+      <p>The same care goes into the land. We grow the herd's green fodder ourselves, organically, and we do not plant hybrid grass.</p>
+    </div>
+  </div>
+</section>
+
+<section class="interest" id="interest" aria-labelledby="interest-h">
+  <div class="wrap interest-grid">
+    <div>
+      <p class="eyebrow">A2 milk and milk products</p>
+      <h2 id="interest-h">Would you like milk or ghee from this herd?</h2>
+      <p class="intro">We are not selling yet. Tell us what you would like, and we will message you first when our A2 milk and milk products are ready.</p>
+    </div>
+    <form class="form" id="ask" novalidate>
+      <div class="field">
+        <label for="f-name">Your name</label>
+        <input type="text" id="f-name" name="name" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="f-area">Your area or city</label>
+        <input type="text" id="f-area" name="area" autocomplete="address-level2" placeholder="For example: Sector 21, Gandhinagar">
+      </div>
+      <fieldset class="field">
+        <legend>I am interested in</legend>
+        <div class="chips">
+          <label for="f-milk"><input type="checkbox" id="f-milk" value="A2 milk" checked> A2 milk</label>
+          <label for="f-ghee"><input type="checkbox" id="f-ghee" value="Ghee"> Ghee</label>
+          <label for="f-other"><input type="checkbox" id="f-other" value="Other milk products"> Other milk products</label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="f-note">Anything you want to ask (optional)</label>
+        <textarea id="f-note" name="note"></textarea>
+      </div>
+      <a class="btn btn-solid" id="wa-send" target="_blank" rel="noopener" aria-disabled="true">Send on WhatsApp</a>
+      <p class="form-note" id="wa-note">This opens WhatsApp with your message ready to send. Nothing is saved on this website.</p>
+    </form>
+  </div>
+</section>
+
+<section class="qa" id="questions" aria-labelledby="qa-h">
+  <div class="wrap qa-grid">
+    <div>
+      <p class="eyebrow">Questions</p>
+      <h2 id="qa-h">Ask us anything.</h2>
+    </div>
+    <div>
+      <details open>
+        <summary>Can I buy your milk or ghee today?</summary>
+        <p>Not yet. We are introducing the herd first. Leave your details above and you will hear from us before anyone else when A2 milk and milk products are ready.</p>
+      </details>
+      <details>
+        <summary>Why only Gir and Kankrej?</summary>
+        <p>Both are indigenous breeds from Gujarat, so they suit this land and climate. Both give A2 milk. We keep the herd purebred, and we never breed related animals with each other.</p>
+      </details>
+      <details>
+        <summary>Why do you care so much about feed?</summary>
+        <p>You are what you eat, and that applies to cows too. Our green fodder is organic and grown in-house. Our whole cotton seed is organic, rain-fed, and bought directly from farmers. We do not feed hybrid grass or Napier.</p>
+      </details>
+      <details>
+        <summary>Do the calves really drink first?</summary>
+        <p>Yes, at every milking. The calf drinks its fill, and only the milk that is left is used for people. We follow this strictly.</p>
+      </details>
+      <details>
+        <summary>Do you use milking machines, hormone injections or antibiotics?</summary>
+        <p>No. Our cows are milked by hand. They are not given hormone injections, and they are not given antibiotics.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="big">Aishvaryam Organics</p>
+        <p lang="gu">ઐશ્વર્યમ્ ઓર્ગેનિક્સ</p>
+        <p class="meaning">Aishvaryam is Sanskrit for abundance. Purebred Gir and Kankrej cows, raised free-range near Gandhinagar, Gujarat.</p>
+      </div>
+      <div>
+        <h3>Talk to us</h3>
+        <ul id="contact-list"></ul>
+      </div>
+      <div>
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#cows">Our cows</a></li>
+          <li><a href="#feed">What they eat</a></li>
+          <li><a href="#milking">How we milk</a></li>
+          <li><a href="#farm">The farm</a></li>
+          <li><a href="#interest">Ask about milk and ghee</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      <p>© <span id="yr">2026</span> Aishvaryam Organics. Near Gandhinagar, Gujarat, India.</p>
+      <p id="img-note">Photographs on this page are illustrative. Photos from our own farm are on the way.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="dock"><a class="btn" href="#interest">Ask about milk and ghee</a></div>
+
+<script>
+/* EDIT 2 of 2. Your contact details. Leave a value as "" and that line is left out of the page.
+   whatsapp: digits only, with country code and no "+" or spaces, for example "919876543210"
+   phone:    as you want it shown, for example "+91 98765 43210"
+   instagram: the handle without "@"                                                              */
+var SITE = {
+  whatsapp: "919727774440",
+  phone: "+91 97277 74440",
+  email: "abhijeetsinghgadhvi@gmail.com",
+  instagram: ""
+};
+
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+
+  // Contact list in the footer
+  var rows = [
+    ["WhatsApp", SITE.whatsapp ? "+" + SITE.whatsapp.replace(/^(\d{2})(\d{5})(\d+)$/, "$1 $2 $3") : "", SITE.whatsapp ? "https://wa.me/" + SITE.whatsapp : ""],
+    ["Phone", SITE.phone, SITE.phone ? "tel:" + SITE.phone.replace(/[^\d+]/g, "") : ""],
+    ["Email", SITE.email, SITE.email ? "mailto:" + SITE.email : ""],
+    ["Instagram", SITE.instagram ? "@" + SITE.instagram : "", SITE.instagram ? "https://www.instagram.com/" + SITE.instagram + "/" : ""]
+  ];
+  var list = $("contact-list");
+  rows.forEach(function (r) {
+    var li = document.createElement("li");
+    var label = document.createElement("small");
+    label.textContent = r[0];
+    li.appendChild(label);
+    if (r[1]) {
+      var a = document.createElement("a");
+      a.href = r[2];
+      a.textContent = r[1];
+      if (/^https/.test(r[2])) { a.target = "_blank"; a.rel = "noopener"; }
+      li.appendChild(a);
+    } else {
+      return;
+    }
+    list.appendChild(li);
+  });
+
+  // Interest form: builds a WhatsApp message. Nothing is stored or sent by this page.
+  var send = $("wa-send"), note = $("wa-note");
+  function message() {
+    var name = $("f-name").value.trim();
+    var area = $("f-area").value.trim();
+    var picks = ["f-milk", "f-ghee", "f-other"].filter(function (id) { return $(id).checked; }).map(function (id) { return $(id).value; });
+    var extra = $("f-note").value.trim();
+    var lines = ["Namaste Aishvaryam Organics."];
+    lines.push("I am " + (name || "a visitor to your website") + (area ? ", from " + area : "") + ".");
+    if (picks.length) lines.push("I am interested in: " + picks.join(", ") + ".");
+    lines.push("Please tell me when you start selling.");
+    if (extra) lines.push(extra);
+    return lines.join("\n");
+  }
+  function refresh() {
+    if (!SITE.whatsapp) {
+      send.removeAttribute("href");
+      send.setAttribute("aria-disabled", "true");
+      note.textContent = "Our WhatsApp number is being added to this page. Please check back soon.";
+      return;
+    }
+    send.href = "https://wa.me/" + SITE.whatsapp + "?text=" + encodeURIComponent(message());
+    send.setAttribute("aria-disabled", "false");
+  }
+  $("ask").addEventListener("input", refresh);
+  $("ask").addEventListener("submit", function (e) { e.preventDefault(); });
+  refresh();
+
+  // Footer year and photo note
+  $("yr").textContent = new Date().getFullYear();
+  if (!document.body.classList.contains("illustrative")) $("img-note").remove();
+})();
+</script>
+</body>
+</html>
